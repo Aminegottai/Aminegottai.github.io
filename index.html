@@ -12,148 +12,369 @@
   <meta property="og:image" content="https://aminegottai.github.io/og-image.png">
   <title>Mohamed Amine Gotai | Portfolio Data Science</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="#home" aria-label="Aller à l'accueil">Mohamed Amine Gotai</a>
+      <a class="brand" href="#home" aria-label="Aller à l'accueil">
+        <span class="brand-dot">&lt;</span>MAG<span class="brand-dot">/&gt;</span>
+      </a>
       <button id="menu-toggle" class="menu-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>
       </button>
       <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
-        <a href="#about">À propos</a>
-        <a href="#projects">Projets</a>
-        <a href="#skills">Compétences</a>
-        <a href="#experience">Formation & Expérience</a>
-        <a href="#contact">Contact</a>
+        <a href="#about"><i class="fa-solid fa-user" aria-hidden="true"></i> À propos</a>
+        <a href="#projects"><i class="fa-solid fa-code" aria-hidden="true"></i> Projets</a>
+        <a href="#skills"><i class="fa-solid fa-brain" aria-hidden="true"></i> Compétences</a>
+        <a href="#experience"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Formation</a>
+        <a href="#contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>
       </nav>
     </div>
   </header>
 
   <main id="main-content">
+
+    <!-- ===== HERO ===== -->
     <section id="home" class="hero section" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">Étudiant Data Science · TEK UP</p>
-          <h1 id="hero-title">Mohamed Amine Gotai</h1>
-          <p class="lead">Je suis étudiant en Data Science à TEK UP et je développe des projets orientés analyse de données, machine learning et visualisation. Je recherche des opportunités de stage et des collaborations professionnelles.</p>
+      <div class="container hero-inner">
+        <div class="hero-text" data-reveal>
+          <p class="eyebrow"><i class="fa-solid fa-circle-dot pulse-dot" aria-hidden="true"></i> Disponible pour stage</p>
+          <h1 id="hero-title">Mohamed Amine<br><span class="gradient-text">Gotai</span></h1>
+          <p class="hero-role" aria-live="polite">
+            <span class="role-prefix">Je suis </span><span id="typed-role" class="typed-text"></span><span class="cursor-blink" aria-hidden="true">|</span>
+          </p>
+          <p class="lead">Étudiant en Data Science à TEK UP, je développe des solutions de bout en bout : analyse de données, machine learning et visualisation. Je recherche des opportunités de stage et de collaborations professionnelles.</p>
           <div class="cta-row" aria-label="Actions principales">
-            <a class="btn btn-primary" href="mailto:mohameedaminegoai@gmail.com">Email</a>
-            <a class="btn" href="https://www.linkedin.com/in/mohamed-amine-gotai-2a3463248" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a class="btn" href="https://github.com/Aminegottai" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a id="cv-link" class="btn" href="/cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+            <a class="btn btn-primary" href="mailto:mohameedaminegoai@gmail.com">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Me contacter
+            </a>
+            <a class="btn" href="https://github.com/Aminegottai" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+            </a>
+            <a class="btn" href="https://www.linkedin.com/in/mohamed-amine-gotai-2a3463248" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn
+            </a>
+            <a id="cv-link" class="btn btn-outline-accent" href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-download" aria-hidden="true"></i> CV
+            </a>
           </div>
-          <p id="cv-note" class="cv-note" hidden>Le fichier <code>cv.pdf</code> est introuvable pour le moment. Ajoutez-le à la racine du dépôt pour activer le téléchargement.</p>
+          <p id="cv-note" class="cv-note" hidden>Le fichier <code>cv.pdf</code> est introuvable. Ajoutez-le à la racine du dépôt.</p>
         </div>
-        <aside class="hero-card" aria-label="Informations rapides">
-          <h2>Profil</h2>
-          <ul>
-            <li><strong>Rôle :</strong> Étudiant Data Science (TEK UP)</li>
-            <li><strong>Email :</strong> <a href="mailto:mohameedaminegoai@gmail.com">mohameedaminegoai@gmail.com</a></li>
-            <li><strong>Téléphone :</strong> <a href="tel:+21694550012">+21694550012</a></li>
-          </ul>
+
+        <aside class="hero-stats" aria-label="Informations rapides" data-reveal data-delay="200">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+            <div>
+              <div class="stat-number">Data Science</div>
+              <div class="stat-label">Spécialisation</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-flask" aria-hidden="true"></i></div>
+            <div>
+              <div class="stat-number">3+</div>
+              <div class="stat-label">Projets réalisés</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+            <div>
+              <div class="stat-number">Python</div>
+              <div class="stat-label">Langage principal</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+            <div>
+              <div class="stat-number">Tunis</div>
+              <div class="stat-label">Tunisie</div>
+            </div>
+          </div>
         </aside>
       </div>
+      <a href="#about" class="scroll-down" aria-label="Défiler vers la section suivante">
+        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+      </a>
     </section>
 
+    <!-- ===== ABOUT ===== -->
     <section id="about" class="section" aria-labelledby="about-title">
       <div class="container">
-        <h2 id="about-title">À propos</h2>
-        <p>Je construis des solutions data de bout en bout : préparation des données, modélisation et restitution des résultats. Mon objectif est de créer des analyses fiables et utiles pour la prise de décision.</p>
+        <div class="section-header" data-reveal>
+          <span class="section-tag">À propos de moi</span>
+          <h2 id="about-title">Qui suis-je ?</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text" data-reveal>
+            <p>Je suis <strong>Mohamed Amine Gotai</strong>, étudiant passionné en Data Science à <strong>TEK UP</strong>. Je construis des solutions data de bout en bout : préparation des données, modélisation et restitution des résultats.</p>
+            <p>Mon objectif est de créer des analyses fiables et utiles pour la prise de décision, en combinant rigueur statistique et clarté de communication.</p>
+            <div class="about-highlights">
+              <div class="highlight-item"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Machine Learning &amp; Deep Learning</div>
+              <div class="highlight-item"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Analyse et visualisation de données</div>
+              <div class="highlight-item"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Data Engineering &amp; Pipelines</div>
+              <div class="highlight-item"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> SQL &amp; Bases de données</div>
+            </div>
+          </div>
+          <div class="about-info" data-reveal data-delay="150">
+            <div class="info-item">
+              <span class="info-icon"><i class="fa-solid fa-user-graduate" aria-hidden="true"></i></span>
+              <div><strong>Formation</strong><span>TEK UP — Data Science</span></div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+              <div><strong>Email</strong><a href="mailto:mohameedaminegoai@gmail.com">mohameedaminegoai@gmail.com</a></div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+              <div><strong>Téléphone</strong><a href="tel:+21694550012">+216 94 550 012</a></div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon"><i class="fa-solid fa-map-marker-alt" aria-hidden="true"></i></span>
+              <div><strong>Localisation</strong><span>Tunis, Tunisie</span></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- ===== PROJECTS ===== -->
     <section id="projects" class="section" aria-labelledby="projects-title">
       <div class="container">
-        <h2 id="projects-title">Projets</h2>
-        <p class="section-intro">Exemples professionnels (placeholders) à remplacer par vos projets réels.</p>
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Mes travaux</span>
+          <h2 id="projects-title">Projets</h2>
+        </div>
         <div class="projects-grid">
-          <article class="project-card">
-            <h3>Placeholder — Analyse prédictive de churn</h3>
-            <p><strong>Résumé :</strong> Pipeline de préparation, entraînement et évaluation pour estimer le risque de départ client.</p>
-            <p><strong>Outils :</strong> Python, Pandas, Scikit-learn, Matplotlib</p>
-            <p class="links"><a href="#" aria-label="Lien GitHub du projet churn">GitHub</a> · <a href="#" aria-label="Lien démo du projet churn">Demo</a></p>
+          <article class="project-card" data-reveal>
+            <div class="project-header">
+              <div class="project-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+              <div class="project-links">
+                <a href="#" aria-label="GitHub du projet churn"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Démo du projet churn"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <h3>Analyse prédictive de churn</h3>
+            <p>Pipeline de préparation, entraînement et évaluation pour estimer le risque de départ client.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span><span class="tag">Matplotlib</span>
+            </div>
           </article>
-          <article class="project-card">
-            <h3>Placeholder — Dashboard BI ventes</h3>
-            <p><strong>Résumé :</strong> Tableau de bord interactif pour le suivi des KPI de ventes et de performance commerciale.</p>
-            <p><strong>Outils :</strong> SQL, Power BI, Excel</p>
-            <p class="links"><a href="#" aria-label="Lien GitHub du dashboard BI">GitHub</a> · <a href="#" aria-label="Lien démo du dashboard BI">Demo</a></p>
+          <article class="project-card" data-reveal data-delay="100">
+            <div class="project-header">
+              <div class="project-icon"><i class="fa-solid fa-chart-bar" aria-hidden="true"></i></div>
+              <div class="project-links">
+                <a href="#" aria-label="GitHub du dashboard BI"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Démo du dashboard BI"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <h3>Dashboard BI Ventes</h3>
+            <p>Tableau de bord interactif pour le suivi des KPI de ventes et de performance commerciale.</p>
+            <div class="project-tags">
+              <span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Excel</span>
+            </div>
           </article>
-          <article class="project-card">
-            <h3>Placeholder — Classification d'images</h3>
-            <p><strong>Résumé :</strong> Prototype de classification d'images pour démontrer un workflow de deep learning basique.</p>
-            <p><strong>Outils :</strong> Python, TensorFlow, NumPy</p>
-            <p class="links"><a href="#" aria-label="Lien GitHub du projet classification">GitHub</a> · <a href="#" aria-label="Lien démo du projet classification">Demo</a></p>
+          <article class="project-card" data-reveal data-delay="200">
+            <div class="project-header">
+              <div class="project-icon"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
+              <div class="project-links">
+                <a href="#" aria-label="GitHub du projet classification"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Démo du projet classification"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <h3>Classification d'images</h3>
+            <p>Prototype de classification d'images avec un workflow complet de deep learning.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">NumPy</span>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- ===== SKILLS ===== -->
     <section id="skills" class="section" aria-labelledby="skills-title">
       <div class="container">
-        <h2 id="skills-title">Compétences</h2>
-        <div class="chips" aria-label="Liste des compétences techniques">
-          <span class="chip">Python</span>
-          <span class="chip">Pandas</span>
-          <span class="chip">NumPy</span>
-          <span class="chip">Scikit-learn</span>
-          <span class="chip">SQL</span>
-          <span class="chip">Power BI</span>
-          <span class="chip">Tableau</span>
-          <span class="chip">Data Visualization</span>
-          <span class="chip">Machine Learning</span>
-          <span class="chip">Git & GitHub</span>
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Expertise</span>
+          <h2 id="skills-title">Compétences</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-group" data-reveal>
+            <h3><i class="fa-solid fa-code" aria-hidden="true"></i> Langages &amp; Librairies</h3>
+            <div class="skill-bars">
+              <div class="skill-bar">
+                <div class="skill-info"><span>Python</span><span>90%</span></div>
+                <div class="bar"><div class="bar-fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-info"><span>SQL</span><span>80%</span></div>
+                <div class="bar"><div class="bar-fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-info"><span>Pandas / NumPy</span><span>85%</span></div>
+                <div class="bar"><div class="bar-fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-info"><span>Scikit-learn</span><span>80%</span></div>
+                <div class="bar"><div class="bar-fill" data-width="80"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-group" data-reveal data-delay="150">
+            <h3><i class="fa-solid fa-brain" aria-hidden="true"></i> Machine Learning</h3>
+            <div class="skill-bars">
+              <div class="skill-bar">
+                <div class="skill-info"><span>Régression / Classification</span><span>85%</span></div>
+                <div class="bar"><div class="bar-fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-info"><span>Deep Learning (TensorFlow)</span><span>70%</span></div>
+                <div class="bar"><div class="bar-fill" data-width="70"></div></div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-info"><span>Feature Engineering</span><span>80%</span></div>
+                <div class="bar"><div class="bar-fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-info"><span>Évaluation de modèles</span><span>82%</span></div>
+                <div class="bar"><div class="bar-fill" data-width="82"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-group" data-reveal data-delay="300">
+            <h3><i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Visualisation &amp; Outils</h3>
+            <div class="chips" aria-label="Liste des outils">
+              <span class="chip"><i class="fa-solid fa-chart-bar" aria-hidden="true"></i> Power BI</span>
+              <span class="chip"><i class="fa-solid fa-table" aria-hidden="true"></i> Tableau</span>
+              <span class="chip"><i class="fa-solid fa-chart-area" aria-hidden="true"></i> Matplotlib</span>
+              <span class="chip"><i class="fa-solid fa-palette" aria-hidden="true"></i> Seaborn</span>
+              <span class="chip"><i class="fa-brands fa-git-alt" aria-hidden="true"></i> Git</span>
+              <span class="chip"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</span>
+              <span class="chip"><i class="fa-solid fa-book" aria-hidden="true"></i> Jupyter</span>
+              <span class="chip"><i class="fa-solid fa-file-excel" aria-hidden="true"></i> Excel</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- ===== EXPERIENCE ===== -->
     <section id="experience" class="section" aria-labelledby="experience-title">
       <div class="container">
-        <h2 id="experience-title">Formation & Expérience</h2>
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Parcours</span>
+          <h2 id="experience-title">Formation &amp; Expérience</h2>
+        </div>
         <div class="timeline">
-          <article class="timeline-item">
-            <h3>TEK UP — Étudiant en Data Science</h3>
-            <p class="meta">2024 — Présent</p>
-            <p>Formation orientée data engineering, statistique appliquée, machine learning et projets académiques.</p>
+          <article class="timeline-item" data-reveal>
+            <div class="tl-dot" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="tl-content">
+              <div class="tl-meta">2024 — Présent</div>
+              <h3>Étudiant en Data Science — TEK UP</h3>
+              <p>Formation orientée data engineering, statistique appliquée, machine learning et projets académiques concrets.</p>
+              <div class="tl-tags">
+                <span class="tag">Python</span><span class="tag">ML</span><span class="tag">SQL</span><span class="tag">Statistics</span>
+              </div>
+            </div>
           </article>
-          <article class="timeline-item">
-            <h3>Placeholder — Projet académique encadré</h3>
-            <p class="meta">2025</p>
-            <p>Réalisation d'un cas pratique complet de collecte, analyse et visualisation des données.</p>
+          <article class="timeline-item" data-reveal data-delay="100">
+            <div class="tl-dot" aria-hidden="true"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="tl-content">
+              <div class="tl-meta">2025</div>
+              <h3>Projet académique encadré</h3>
+              <p>Réalisation d'un cas pratique complet de collecte, analyse et visualisation des données avec rapport de résultats.</p>
+              <div class="tl-tags">
+                <span class="tag">Pandas</span><span class="tag">Matplotlib</span><span class="tag">Report</span>
+              </div>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- ===== CERTIFICATIONS ===== -->
     <section id="certifications" class="section" aria-labelledby="certifications-title">
       <div class="container">
-        <h2 id="certifications-title">Certifications & Réalisations</h2>
-        <ul class="achievements">
-          <li>Placeholder — Certification Data Analysis (à remplacer)</li>
-          <li>Placeholder — Participation à un challenge data (à remplacer)</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="contact" class="section" aria-labelledby="contact-title">
-      <div class="container">
-        <h2 id="contact-title">Contact</h2>
-        <div class="contact-card">
-          <p><strong>Email :</strong> <a href="mailto:mohameedaminegoai@gmail.com">mohameedaminegoai@gmail.com</a></p>
-          <p><strong>Téléphone :</strong> <a href="tel:+21694550012">+21694550012</a></p>
-          <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/mohamed-amine-gotai-2a3463248" target="_blank" rel="noopener noreferrer">mohamed-amine-gotai-2a3463248</a></p>
-          <p><strong>GitHub :</strong> <a href="https://github.com/Aminegottai" target="_blank" rel="noopener noreferrer">github.com/Aminegottai</a></p>
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Accomplissements</span>
+          <h2 id="certifications-title">Certifications</h2>
+        </div>
+        <div class="certs-grid">
+          <div class="cert-card" data-reveal>
+            <div class="cert-icon"><i class="fa-solid fa-certificate" aria-hidden="true"></i></div>
+            <div class="cert-info">
+              <strong>Data Analysis Certification</strong>
+              <span>À remplacer par votre certification</span>
+            </div>
+          </div>
+          <div class="cert-card" data-reveal data-delay="100">
+            <div class="cert-icon"><i class="fa-solid fa-trophy" aria-hidden="true"></i></div>
+            <div class="cert-info">
+              <strong>Data Challenge</strong>
+              <span>Participation à un challenge data</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Travaillons ensemble</span>
+          <h2 id="contact-title">Contact</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-item" data-reveal>
+            <a href="mailto:mohameedaminegoai@gmail.com" class="contact-link">
+              <div class="contact-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
+              <div><strong>Email</strong><span>mohameedaminegoai@gmail.com</span></div>
+            </a>
+          </div>
+          <div class="contact-item" data-reveal data-delay="100">
+            <a href="tel:+21694550012" class="contact-link">
+              <div class="contact-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+              <div><strong>Téléphone</strong><span>+216 94 550 012</span></div>
+            </a>
+          </div>
+          <div class="contact-item" data-reveal data-delay="200">
+            <a href="https://www.linkedin.com/in/mohamed-amine-gotai-2a3463248" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <div class="contact-icon"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></div>
+              <div><strong>LinkedIn</strong><span>mohamed-amine-gotai</span></div>
+            </a>
+          </div>
+          <div class="contact-item" data-reveal data-delay="300">
+            <a href="https://github.com/Aminegottai" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <div class="contact-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></div>
+              <div><strong>GitHub</strong><span>Aminegottai</span></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Mohamed Amine Gotai · Hébergé sur GitHub Pages</p>
+    <div class="container footer-inner">
+      <div class="footer-brand"><span class="brand-dot">&lt;</span>MAG<span class="brand-dot">/&gt;</span></div>
+      <p>&copy; <span id="year"></span> Mohamed Amine Gotai · Hébergé sur GitHub Pages</p>
+      <div class="footer-socials">
+        <a href="https://github.com/Aminegottai" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/mohamed-amine-gotai-2a3463248" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+        <a href="mailto:mohameedaminegoai@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
