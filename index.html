@@ -1,62 +1,161 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Mohamed Amine Gotai, étudiant en Data Science à TEK UP. Découvrez mes projets, compétences et expériences.">
-    <title>Mohamed Amine Gotai - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Mohamed Amine Gotai, étudiant en Data Science à TEK UP : projets, compétences, formation et contact.">
+  <meta name="author" content="Mohamed Amine Gotai">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mohamed Amine Gotai | Data Science Portfolio">
+  <meta property="og:description" content="Étudiant Data Science (TEK UP) — portfolio professionnel avec projets, compétences et contact.">
+  <meta property="og:url" content="https://aminegottai.github.io/">
+  <meta property="og:image" content="https://aminegottai.github.io/og-image.png">
+  <title>Mohamed Amine Gotai | Portfolio Data Science</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="sticky-header">
-        <nav>
-            <ul>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#experience">Expérience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="hero">
-        <h1>Bienvenue sur mon portfolio</h1>
-        <p>Je suis Mohamed Amine Gotai, étudiant en Data Science à TEK UP.</p>
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Aller à l'accueil">Mohamed Amine Gotai</a>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
+        <a href="#about">À propos</a>
+        <a href="#projects">Projets</a>
+        <a href="#skills">Compétences</a>
+        <a href="#experience">Formation & Expérience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="home" class="hero section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Étudiant Data Science · TEK UP</p>
+          <h1 id="hero-title">Mohamed Amine Gotai</h1>
+          <p class="lead">Je suis étudiant en Data Science à TEK UP et je développe des projets orientés analyse de données, machine learning et visualisation. Je recherche des opportunités de stage et des collaborations professionnelles.</p>
+          <div class="cta-row" aria-label="Actions principales">
+            <a class="btn btn-primary" href="mailto:mohameedaminegoai@gmail.com">Email</a>
+            <a class="btn" href="https://www.linkedin.com/in/mohamed-amine-gotai-2a3463248" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn" href="https://github.com/Aminegottai" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a id="cv-link" class="btn" href="/cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+          </div>
+          <p id="cv-note" class="cv-note" hidden>Le fichier <code>cv.pdf</code> est introuvable pour le moment. Ajoutez-le à la racine du dépôt pour activer le téléchargement.</p>
+        </div>
+        <aside class="hero-card" aria-label="Informations rapides">
+          <h2>Profil</h2>
+          <ul>
+            <li><strong>Rôle :</strong> Étudiant Data Science (TEK UP)</li>
+            <li><strong>Email :</strong> <a href="mailto:mohameedaminegoai@gmail.com">mohameedaminegoai@gmail.com</a></li>
+            <li><strong>Téléphone :</strong> <a href="tel:+21694550012">+21694550012</a></li>
+          </ul>
+        </aside>
+      </div>
     </section>
-    <section id="projets">
-        <h2>Projets</h2>
-        <div class="project-card">Projet 1</div>
-        <div class="project-card">Projet 2</div>
-        <div class="project-card">Projet 3</div>
-        <!-- Add more projects as needed -->
+
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">À propos</h2>
+        <p>Je construis des solutions data de bout en bout : préparation des données, modélisation et restitution des résultats. Mon objectif est de créer des analyses fiables et utiles pour la prise de décision.</p>
+      </div>
     </section>
-    <section id="competences">
-        <h2>Compétences</h2>
-        <div class="chip">Python</div>
-        <div class="chip">Pandas</div>
-        <div class="chip">NumPy</div>
-        <div class="chip">Scikit-learn</div>
-        <div class="chip">SQL</div>
-        <div class="chip">Power BI</div>
-        <div class="chip">Tableau</div>
-        <div class="chip">ML</div>
-        <div class="chip">Data Viz</div>
-        <div class="chip">Git</div>
-        <div class="chip">Docker</div>
+
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title">Projets</h2>
+        <p class="section-intro">Exemples professionnels (placeholders) à remplacer par vos projets réels.</p>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>Placeholder — Analyse prédictive de churn</h3>
+            <p><strong>Résumé :</strong> Pipeline de préparation, entraînement et évaluation pour estimer le risque de départ client.</p>
+            <p><strong>Outils :</strong> Python, Pandas, Scikit-learn, Matplotlib</p>
+            <p class="links"><a href="#" aria-label="Lien GitHub du projet churn">GitHub</a> · <a href="#" aria-label="Lien démo du projet churn">Demo</a></p>
+          </article>
+          <article class="project-card">
+            <h3>Placeholder — Dashboard BI ventes</h3>
+            <p><strong>Résumé :</strong> Tableau de bord interactif pour le suivi des KPI de ventes et de performance commerciale.</p>
+            <p><strong>Outils :</strong> SQL, Power BI, Excel</p>
+            <p class="links"><a href="#" aria-label="Lien GitHub du dashboard BI">GitHub</a> · <a href="#" aria-label="Lien démo du dashboard BI">Demo</a></p>
+          </article>
+          <article class="project-card">
+            <h3>Placeholder — Classification d'images</h3>
+            <p><strong>Résumé :</strong> Prototype de classification d'images pour démontrer un workflow de deep learning basique.</p>
+            <p><strong>Outils :</strong> Python, TensorFlow, NumPy</p>
+            <p class="links"><a href="#" aria-label="Lien GitHub du projet classification">GitHub</a> · <a href="#" aria-label="Lien démo du projet classification">Demo</a></p>
+          </article>
+        </div>
+      </div>
     </section>
-    <section id="experience">
-        <h2>Expérience</h2>
-        <div class="timeline-placeholder">Timeline d'expérience ici</div>
+
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 id="skills-title">Compétences</h2>
+        <div class="chips" aria-label="Liste des compétences techniques">
+          <span class="chip">Python</span>
+          <span class="chip">Pandas</span>
+          <span class="chip">NumPy</span>
+          <span class="chip">Scikit-learn</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Power BI</span>
+          <span class="chip">Tableau</span>
+          <span class="chip">Data Visualization</span>
+          <span class="chip">Machine Learning</span>
+          <span class="chip">Git & GitHub</span>
+        </div>
+      </div>
     </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:mohameedaminegoai@gmail.com">mohameedaminegoai@gmail.com</a></p>
-        <p>Téléphone: <a href="tel:+21694550012">+21694550012</a></p>
-        <p><a href="https://www.linkedin.com/in/mohamed-amine-gotai-2a3463248">LinkedIn</a></p>
-        <p><a href="https://github.com/Aminegottai">GitHub</a></p>
+
+    <section id="experience" class="section" aria-labelledby="experience-title">
+      <div class="container">
+        <h2 id="experience-title">Formation & Expérience</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <h3>TEK UP — Étudiant en Data Science</h3>
+            <p class="meta">2024 — Présent</p>
+            <p>Formation orientée data engineering, statistique appliquée, machine learning et projets académiques.</p>
+          </article>
+          <article class="timeline-item">
+            <h3>Placeholder — Projet académique encadré</h3>
+            <p class="meta">2025</p>
+            <p>Réalisation d'un cas pratique complet de collecte, analyse et visualisation des données.</p>
+          </article>
+        </div>
+      </div>
     </section>
-    <footer>
-        <p>&copy; <span id="year"></span> Mohamed Amine Gotai</p>
-    </footer>
-    <script src="script.js"></script>
+
+    <section id="certifications" class="section" aria-labelledby="certifications-title">
+      <div class="container">
+        <h2 id="certifications-title">Certifications & Réalisations</h2>
+        <ul class="achievements">
+          <li>Placeholder — Certification Data Analysis (à remplacer)</li>
+          <li>Placeholder — Participation à un challenge data (à remplacer)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Contact</h2>
+        <div class="contact-card">
+          <p><strong>Email :</strong> <a href="mailto:mohameedaminegoai@gmail.com">mohameedaminegoai@gmail.com</a></p>
+          <p><strong>Téléphone :</strong> <a href="tel:+21694550012">+21694550012</a></p>
+          <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/mohamed-amine-gotai-2a3463248" target="_blank" rel="noopener noreferrer">mohamed-amine-gotai-2a3463248</a></p>
+          <p><strong>GitHub :</strong> <a href="https://github.com/Aminegottai" target="_blank" rel="noopener noreferrer">github.com/Aminegottai</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Mohamed Amine Gotai · Hébergé sur GitHub Pages</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
