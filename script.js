@@ -125,17 +125,23 @@ const canvas = document.getElementById("particles-canvas");
 if (canvas) {
   const ctx = canvas.getContext("2d");
   let W, H;
+  let particles = [];
 
   function resize() {
     W = canvas.width = window.innerWidth;
     H = canvas.height = window.innerHeight;
+    particles.forEach((p) => {
+      p.x = Math.min(p.x, W);
+      p.y = Math.min(p.y, H);
+    });
   }
+
   resize();
   window.addEventListener("resize", resize);
 
-  const particles = Array.from({ length: 55 }, () => ({
-    x: Math.random() * window.innerWidth,
-    y: Math.random() * window.innerHeight,
+  particles = Array.from({ length: 55 }, () => ({
+    x: Math.random() * W,
+    y: Math.random() * H,
     vx: (Math.random() - 0.5) * 0.35,
     vy: (Math.random() - 0.5) * 0.35,
     r: Math.random() * 1.8 + 0.6,
